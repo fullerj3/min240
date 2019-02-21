@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <style>
+        #robot {
+            position: absolute;
+            top: 25vmin;
+            left: 25vmin;
+            width: 50vmin;
+            height: 50vmin;
+            border: 1px solid black;
+            border-radius: 50
+        }
+        #rect {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            width: 50%;
+            height: 30%;
+            background-color: black;
+            border-radius: 20%;
+        }
+        #oval {
+            position: absolute;
+            top: 55%;
+            left: 30%;
+            width: 40%;
+            height: 20%;
+            background-color: white;
+            border-radius: 50%;
+        }
+        #circle {
+            position: absolute;
+            top: 65%;
+            left: 45%;
+            width:10%;
+            height: 10%;
+            background-color: darkred;
+            border-radius: 50%;
+        }
+        #diamond {
+            position: absolute;
+            top: 40%;
+            left: 45%;
+            width:10%;
+            height: 10%;
+            background-color: black;
+            transform: rotateZ(45deg);
+        }
+        #trapezoid {
+            position: absolute;
+            top: 78%;
+            left: 25%;
+            width: 50%;
+            height: 20%;
+            background-color: black;
+            transform: perspective(3em) rotateX(10deg);
+        }
+        #para01 {
+            position: absolute;
+            top: 65%;
+            left: 5%;
+            width: 20%;
+            height: 10%;
+            background-color: black;
+            transform: skewX(-35deg);
+        }
+        #para02 {
+            position: absolute;
+            top: 65%;
+            left: 75%;
+            width: 20%;
+            height: 10%;
+            background-color: black;
+            transform: skewX(35deg);
+        }
+    </style>
+    <body>
+        <div id="robot"> 
+            <div id="rect"> </div> 
+            <div id="oval"> </div>
+            <div id="circle"> </div>
+            <div id="diamond"> </div>
+            <div id="trapezoid"> </div>
+            <div id="para01"> </div>
+            <div id="para02"> </div>
+        </div>
+    </body>
+</html>
