@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head> </head>
+<style>
+    #background {
+        position:absolute;
+        top:0;
+        left: 0;
+        width: 200vmin;
+        height: 200vmin;
+        background-image: url("https://img.freepik.com/free-vector/background-scene-with-tree-white-fence-garden_1639-2581.jpg?size=626&ext=jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    #startscreen{
+        position: absolute;
+        top: 0vh;
+        left: 10vw;
+        width: 80vw;
+        height: 90vh;
+        background-color: olivedrab;
+        font-size: 500%;
+        text-align: center;
+        font-family: sans-serif;
+    }
+    
+    #game{
+        position: absolute;
+        top: 5vh;
+        left: 5vw;
+        width: 90vw;
+        height: 90vh;
+        display: none;   
+    }
+    
+    #endscreen{
+        position: absolute;
+        top: 30vh;
+        left: 10vw;
+        width: 80vw;
+        height: 40vh;
+        background-color: black;
+        display: none;
+    }
+    
+    #startBTN{
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        width: 80%;
+        height: 20%;
+        background-color: yellow;
+        font-size: 90%;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+    }
+    #wateringcan{
+        position:absolute;
+        top: 40%;
+        left: 50%;
+        width: 10%;
+        height: 100%;
+        background-image: url("http://clipart-library.com/images/rTLnrnGjc.png");
+        background-repeat: no-repeat;
+        background-size: 90%;
+        cursor: pointer;
+        user-select: none;
+    }
+    #flower{
+        position:absolute;
+        top: 81%;
+        left: 30%;
+        width: 50%;
+        height: 100%;
+        background-image: url("http://worldartsme.com/images/flowers-clipart-1.jpg");
+        background-repeat: no-repeat;
+        background-size: 20%;
+        z-index: 1;
+    }
+    #stem{
+        position: absolute;
+        top: 100%;
+        left: 35%;
+        width: .5%;
+        height: 100%;
+        background-color: greenyellow;
+        background-repeat: repeat-y;
+        z-index: 0;
+    }
+    #farmer{
+        position: absolute;
+        top:40%;
+        left:70%;
+        width: 80vw;
+        height: 190vh;
+        background-image: url("https://i.pinimg.com/originals/3e/07/89/3e0789ea643ea1867cb40b91578b0d6d.png");
+        background-repeat: no-repeat;
+        background-size: 30%;
+        cursor: pointer;
+        user-select: none;
+    }#ground {
+        position:absolute;
+        top:110%;
+        left: -70;
+        width: 400vmin;
+        height: 200vmin;
+        background-color: firebrick;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    #instructions{
+        position: absolute;
+        top: 40%;
+        left: 8%;
+        width: 85%;
+        height: 55%;
+        
+    }
+    #howto{
+        position: absolute;
+        top: 0%;
+        left: 8%;
+        width: 85%;
+        height: 20%;
+        font-family: sans-serif;
+        font-size: 30%;
+    }
+    #steps{
+        position: absolute;
+        top: 20%;
+        left: 8%;
+        width: 85%;
+        height: 40%;
+        font-family: sans-serif;
+        font-size: 40%;
+    }
+    #close{
+        position: absolute;
+        top: 5%;
+        left: 2%;
+        width: 20%;
+        height: 20%;
+        background-image: url("https://image.flaticon.com/icons/svg/8/8783.svg");
+        background-repeat: no-repeat;
+        background-size: 10%;
+        
+    }
+    </style>
+    
+    <body>
+    <div id="background">
+        <div id="startscreen"> Flower Grow 
+            <div id="startBTN"> Start </div>
+            <div id="instructions"> 
+                <div id="howto"> How to Play </div>
+                <div id="steps"> The farmer needs your help!!!!! Click the can until the flower stops growing.  </div>
+            </div>
+        </div>
+        <div id="game"> 
+            <div id="wateringcan"> </div>
+            <div id="flower"> </div>
+            <div id="stem"> </div>
+            <div id="farmer"> </div>
+            <div id="ground"> </div>
+            <div id="close"> </div>
+        </div>
+        <div id="endscreen"></div>
+    </div>
+        
+<script>
+    var myStartScreen;  
+    myStartScreen = document.querySelector("#startscreen")
+    
+    var myGameScreen;  
+    myGameScreen = document.querySelector("#game")
+    
+    var myEndScreen;
+    myEndScreen = 
+    document.querySelector("#endscreen")
+    
+    var myClose;
+    myClose =
+    document.querySelector("close")
+        
+    var myStartBTN;  
+    myStartBTN = document.querySelector("#startBTN")
+    
+    myStartBTN.addEventListener("click", hideStartShowGame, false);
+    
+    var myWateringCan;
+    myWateringCan = document.querySelector("#wateringcan");
+    myWateringCan.addEventListener("click", growFlower, false);
+    myWateringCan.addEventListener("click", growStem, false)
+    
+    var myFlowerTop;
+    myFlowerTop = document.querySelector("#flower")
+    
+    var myStem;
+    myStem =
+    document.querySelector("#stem")
+    
+    var myPositionY = 0;
+    
+    function growFlower() {
+        myPositionY = myPositionY - 20;
+        //myPositonY -= 20;
+        myFlowerTop.style.transform = "translateY("+myPositionY+"%)";
+        
+        //myFlowerTop.style.transform = 'translateY(${myPositionY}%)'
+    }
+    function growStem() {
+        myPositionY = myPositionY - 20;
+        myStem.style.transform =
+        "translateY("+myPositionY+"%)";
+    }
+    
+    function hideStartShowGame() {
+        myStartScreen.style.display = "none";
+        myGameScreen.style.display= "block";
+    }
+    
+    function hideGameShowEnd() {
+        myGameScreen.style.display = "none";
+        myEndScreen.style.display= "block";
+    }
+</script>
+</body>
+</html>
