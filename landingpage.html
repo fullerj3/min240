@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>CONFLUENCE</title>
+  </head>
+    <style> 
+        #frame{
+            position: absolute;
+            z-index: 1;
+            top: 0vh;
+            left: 0vw;
+            width: 100vw;
+            height: 500vh;
+            border: 1px solid black;
+        }
+        #subheadingframe{
+            position: absolute;
+            z-index: 1;
+            top:15vh;
+            left: 0vw;
+            width: 100%;
+            height: 70vh;
+            border: 1px solid red;
+            
+        }
+        #coverframe{
+            position: absolute;
+            z-index: 2;
+            top:0vh;
+            left: 0vw;
+            width: 80%;
+            height: 70vh;
+            background-image: linear-gradient( to bottom right ,red, black);
+            
+        }
+        #coverphoto{
+            position: absolute;
+            z-index: 3;
+            top:0%;
+            left:0%;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://images.unsplash.com/photo-1510853851847-5c02796e8c8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80");
+            background-repeat: no-repeat;
+            background-position: center;
+            
+        }
+        #rightsidebuttons{
+            position: absolute;
+            z-index:4;
+            top:0%;
+            left:80%;
+            width:20%;
+            height:100%;
+            border:1px solid green;
+            
+        }
+        #topbutton{
+            position: absolute;
+            z-index: 5;
+            top:0%;
+            left:0%;
+            width:100%;
+            height: 25%;
+            border: solid black;
+        }
+        #secondbutton{
+            position: absolute;
+            z-index: 5;
+            top:25%;
+            left:0%;
+            width:100%;
+            height: 25%;
+            border: solid black;
+        }
+        #thirdbutton{
+            position: absolute;
+            z-index: 5;
+            top:50%;
+            left:0%;
+            width:100%;
+            height: 25%;
+            border: solid black;
+        }
+        #fourthbutton{
+            position: absolute;
+            z-index: 5;
+            top:75%;
+            left:0%;
+            width:100%;
+            height: 25%;
+            border: solid black;
+        }
+        #artbutton{
+            position: absolute;
+            z-index: 6;
+            top:0%;
+            left:0%;
+            width:100%;
+            height: 100%;
+            background-color: red;
+        }
+        #fashionbutton{
+            position: absolute;
+            z-index: 6;
+            top:0%;
+            left:0%;
+            width:100%;
+            height: 100%;
+            background-color: red;
+        }
+        #musicbutton{
+            position: absolute;
+            z-index: 6;
+            top:0%;
+            left:0%;
+            width:100%;
+            height: 100%;
+            background-color: red;
+        }
+        #idkbutton{
+            position: absolute;
+            z-index: 6;
+            top:0%;
+            left:0%;
+            width:100%;
+            height: 100%;
+            background-color: red;
+        }
+        #art{
+            position: absolute;
+            z-index: 7;
+            top:20%;
+            left:10%;
+            width:80%;
+            height: 60%;
+            background-color: black;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 175%;
+            color: grey;
+            overflow: hidden;
+        }
+        #fashion{
+            position: absolute;
+            z-index: 7;
+            top:20%;
+            left:10%;
+            width:80%;
+            height: 60%;
+            background-color: black;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 175%;
+            color: grey;
+            overflow: hidden;
+        }
+        #music{
+            position: absolute;
+            z-index: 7;
+            top:20%;
+            left:10%;
+            width:80%;
+            height: 60%;
+            background-color: black;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 175%;
+            color: grey;
+            overflow: hidden;
+        }
+        #idk{
+            position: absolute;
+            z-index: 7;
+            top:20%;
+            left:10%;
+            width:80%;
+            height: 60%;
+            background-color: black;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 175%;
+            color: grey;
+            overflow: hidden;
+        }
+        #thirdheadingframe{
+            position: absolute;
+            z-index: 1;
+            top:85vh;
+            left: 0vw;
+            width: 100%;
+            height: 90vh;
+            border: 1px solid red;
+        } 
+        #coverframeTWO{
+            position: absolute;
+            z-index: 2;
+            top:0vh;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            background-image: linear-gradient( to bottom right ,red, black);
+        }
+        #coverphotoTWO{
+            position: absolute;
+            z-index: 3;
+            top:0%;
+            left:0%;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://images.unsplash.com/photo-1520258429519-b62b38466266?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+            background-repeat: no-repeat;
+            background-position: center;
+            
+        }
+        #columnFRAME{
+            position: absolute;
+            z-index: 2;
+            top:0vh;
+            left: 0%;
+            width: 50%;
+            height: 100%;
+            background-color: red;
+        }
+        #artFRAME{
+            position: absolute;
+            z-index: 2;
+            top:5vh;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+            background-color: black;
+        }
+        #fourthheadingframe{
+            position: absolute;
+            z-index: 1;
+            top:175vh;
+            left: 0vw;
+            width: 100%;
+            height: 90vh;
+            border: 1px solid red;
+        } 
+        #fifthheadingframe{
+            position: absolute;
+            z-index: 1;
+            top:265vh;
+            left: 0vw;
+            width: 100%;
+            height: 90vh;
+            border: 1px solid red;
+        }
+        #coverframeTHREE{
+            position: absolute;
+            z-index: 2;
+            top:0vh;
+            left: 0%;
+            width: 50%;
+            height: 100%;
+            background-image: linear-gradient( to bottom right ,red, black);
+        }
+        #columnFRAMETWO{
+            position: absolute;
+            z-index: 2;
+            top:0vh;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            background-color: red;
+        }
+        #fashionFRAME{
+            position: absolute;
+            z-index: 2;
+            top:5vh;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+            background-color: black;
+        }
+        #coverphotoTHREE{
+            position: absolute;
+            z-index: 3;
+            top:0%;
+            left:0%;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://images.unsplash.com/photo-1525665454130-3b7a8758fd17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
+        #coverframeFOUR{
+            position: absolute;
+            z-index: 2;
+            top:0vh;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            background-image: linear-gradient( to bottom right ,red, black);
+        }
+        #columnFRAMETHREE{
+            position: absolute;
+            z-index: 2;
+            top:0vh;
+            left: 0%;
+            width: 50%;
+            height: 100%;
+            background-color: red;
+        }
+        #musicFRAME{
+            position: absolute;
+            z-index: 2;
+            top:5vh;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+            background-color: black;
+        }
+        #coverphotoFOUR{
+            position: absolute;
+            z-index: 3;
+            top:0%;
+            left:0%;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://images.unsplash.com/photo-1525362081669-2b476bb628c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
+        #footer{
+            position: absolute;
+            z-index: 1;
+            top:455vh;
+            left: 0vw;
+            width: 100%;
+            height: 45vh;
+            background-color: black;
+        }
+        #artTitle{
+            position: absolute;
+            z-index: 2;
+            top:5vh;
+            left: 5%;
+            width: 90%;
+            height: 15%;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 325%;
+            color: grey;
+            overflow: hidden;
+        }
+        #fashionTitle{
+            position: absolute;
+            z-index: 2;
+            top:5vh;
+            left: 5%;
+            width: 90%;
+            height: 15%;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 350%;
+            color: grey;
+            overflow: hidden;
+        }
+        #musicTitle{
+            position: absolute;
+            z-index: 2;
+            top:5vh;
+            left: 5%;
+            width: 90%;
+            height: 15%;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 350%;
+            color: grey;
+            overflow: hidden;
+        }
+        #artparaWIRE{
+            position: absolute;
+            z-index: 2;
+            top:25%;
+            left: 5%;
+            width: 90%;
+            height: 60%;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 115%;
+            color: grey;
+            overflow: hidden;  
+        }
+        #fashparaWIRE{
+            position: absolute;
+            z-index: 2;
+            top:25%;
+            left: 5%;
+            width: 90%;
+            height: 60%;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 115%;
+            color: grey;
+            overflow: hidden; 
+        }
+        #musparaWIRE{
+            position: absolute;
+            z-index: 2;
+            top:25%;
+            left: 5%;
+            width: 90%;
+            height: 60%;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 115%;
+            color: grey;
+            overflow: hidden; 
+        }
+        #designprocessblock{
+            position: absolute;
+            z-index: 1;
+            top:355vh;
+            left: 0vw;
+            width: 100%;
+            height: 100vh;
+            border: 1px solid red;
+        }
+        #designTITLE{
+            position: absolute;
+            z-index: 1;
+            top:0%;
+            left: 0vw;
+            width: 100%;
+            height: 12%;
+            background-color: black;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 350%;
+            color: grey;
+            overflow: hidden;
+        }
+        #columnDESIGN{
+            position: absolute;
+            z-index: 2;
+            top:12%;
+            left: 0%;
+            width: 50%;
+            height: 88%;
+            background-color: red;
+        }
+        #userResearch{
+            position: absolute;
+            z-index: 2;
+            top:10%;
+            left: 5%;
+            width: 90%;
+            height: 15%;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 250%;
+            color: grey;
+            overflow: hidden;
+        }
+        #brainStorm{
+            position: absolute;
+            z-index: 2;
+            top:25%;
+            left: 5%;
+            width: 90%;
+            height: 15%;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 250%;
+            color: grey;
+            overflow: hidden;
+        }
+        #wireFrame{
+            position: absolute;
+            z-index: 2;
+            top:40%;
+            left: 5%;
+            width: 90%;
+            height: 15%;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 250%;
+            color: grey;
+            overflow: hidden;
+        }
+        #workflow{
+            position: absolute;
+            z-index: 2;
+            top:55%;
+            left: 5%;
+            width: 90%;
+            height: 15%;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 250%;
+            color: grey;
+            overflow: hidden;
+        }
+        #interface{
+            position: absolute;
+            z-index: 2;
+            top:70%;
+            left: 5%;
+            width: 90%;
+            height: 15%;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 250%;
+            color: grey;
+            overflow: hidden;
+        }
+        #columnVIDEO{
+            position: absolute;
+            z-index: 2;
+            top:12%;
+            left: 50%;
+            width: 50%;
+            height: 88%;
+            background-image: linear-gradient(red,black)
+        }
+        #videoTITLE{
+            position: absolute;
+            z-index: 1;
+            top:0%;
+            left: 0vw;
+            width: 100%;
+            height: 12%;
+            border: 1px solid red;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 250%;
+            color: grey;
+            overflow: hidden;
+        }
+        #embedframe{
+            position: absolute;
+            z-index: 2;
+            top:12%;
+            left: 5%;
+            width: 93%;
+            height: 40%;
+        }
+        #videoPARA{
+          position: absolute;
+            z-index: 2;
+            top:52%;
+            left: 5%;
+            width: 93%;
+            height: 40%;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 150%;
+            color: grey;
+            overflow: hidden;
+        }
+        #footerNOTES{
+            position: absolute;
+            z-index: 2;
+            top:20%;
+            left: 37%;
+            width: 26%;
+            height: 40%;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 150%;
+            color: grey;
+            overflow: hidden;
+        }
+        #buttonCONTAIN{
+            position: absolute;
+            z-index: 2;
+            top:85%;
+            left: 34%;
+            width: 32%;
+            height: 9%;
+        }
+      </style>
+  <body>
+    <h1>CONFLUENCE. MERGING ART, FASHION, and MUSIC </h1>
+    <div id="frame">
+        <div id="subheadingframe">
+            <div id="coverframe"> 
+                <div id="coverphoto"> </div>
+            </div>
+            <div id="rightsidebuttons">     
+                <div id="topbutton"> 
+                    <div id="artbutton">
+                        <div id="art"> ART </div>
+                    </div>
+                </div>
+                <div id="secondbutton"> 
+                    <div id="fashionbutton">
+                        <div id="fashion"> FASHION </div>
+                    </div>
+                </div>
+                <div id="thirdbutton">
+                    <div id="musicbutton">
+                        <div id="music"> MUSIC </div>
+                    </div>
+                </div>
+                <div id="fourthbutton"> 
+                    <div id="idkbutton"> 
+                        <div id="idk">PROFILE </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="thirdheadingframe"> 
+            <div id="coverframeTWO"> 
+                <div id="coverphotoTWO"> </div>
+            </div>
+            <div id="columnFRAME"> 
+                <div id="artFRAME">
+                    <div id="artTitle"> CONFLUENCE </div>
+                    <div id="artparaWIRE"> Confluence is a social hub for art, fashion, and music. Where you can look at others work and comment on their work along with being able to communicate with each other via inboxing. Also, if there are local events (art galleries, concerts, or fashion shows) you can post it to the bulletin and whoever is within 1000 miles of you will be notified. There will also be a national bulletin board for all events (not just local).  </div>
+                    <div id="buttonCONTAIN">
+                    <button type="button" class="btn btn-danger">GET STARTED</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fourthheadingframe"> 
+            <div id="coverframeTHREE">
+                <div id="coverphotoTHREE"> </div>
+            </div>
+            <div id="columnFRAMETWO"> 
+                <div id="fashionFRAME"> 
+                    <div id="fashionTitle">  INSPIRE </div>
+                    <div id="fashparaWIRE"> After doing an interview with  upcoming fashion designer Brady Wilson, he told me, “I make sure I’m always tapped in to the world of fashion and art”. This helps him stay inspired, and keep producing new products. We’re creating a community of creators to keep those inspired to continue to create. </div>
+                </div>
+            </div>
+        </div>
+        <div id="fifthheadingframe">
+            <div id="coverframeFOUR"> 
+                <div id="coverphotoFOUR"> </div>
+            </div>
+            <div id="columnFRAMETHREE"> 
+                <div id="musicFRAME"> 
+                    <div id="musicTitle"> CRITIQUE </div>
+                    <div id="musparaWIRE"> We want to create a positive community where you can surround yourself around creators just like yourself and who give positive feedback but also constructive criticism. These will help you learn, and develop your passion. </div>
+                </div>
+            </div>
+        </div>
+        <div id="designprocessblock">
+            <div id="designTITLE"> DESIGN PROCESS</div>
+            <div id="columnDESIGN"> 
+                <div id="userResearch"> USER RESEARCH </div>
+                <div id="brainStorm"> BRAIN STORM </div>
+                <div id="wireFrame">  WIREFRAME</div>
+                <div id="workflow"> WORKFLOW </div>
+                <div id="interface"> INTERFACE </div>
+            </div>
+            <div id="columnVIDEO">
+                <div id="videoTITLE"> VIDEO PROPOSAL</div>
+                <div id="embedframe">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/FklZ0GJ-K8E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="videoPARA"> THIS VIDEO IS AN EXAMPLE OF HOW SOMEONE WOULD USE THE APP.</div>
+            </div>
+        </div>
+        <div id="footer"> 
+            <div id="footerNOTES"> @CONFLUENCE JUSTIN FULLER MIN 240 APRIL 
+            </div>
+        </div>
+      </div>
+    
+  </body>
+</html>
