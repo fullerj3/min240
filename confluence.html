@@ -20,7 +20,24 @@
         position: -webkit-sticky; /* Safari */
         position: sticky;
         top: 0%;
+        z-index: 2;
+        animation: shake 1s ;
+        animation-delay: 1s;
     }
+  
+    @keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
     .tab-content{
         border-left: 1px solid #ddd;
         border-right: 1px solid #ddd;
@@ -71,12 +88,23 @@
         height:20vh;
         
     }
-    
+    #post{
+        position: absolute;
+        padding: 30px;
+        padding-right: 30px;
+        background-color: white;
+        top: 260vh;
+        height: 20vh;
+        width: 50vw;
+        z-index: 1;
+        max-width: 100%;
+    }
     @media screen and (max-width: 900px) {
         ul {
         width: 100%;
         height: auto;
         position: fixed;
+        z-index: 999;
   } 
     @media screen and (max-width: 400px) {
         li  {
@@ -130,14 +158,15 @@
       
     </div>
         <ul>
-  <li><a class="active" href="#home">POST</a></li>
-  <li><a href="">NEWS</a></li>
-  <li><a href="">MUSIC</a></li>
-  <li><a href="">ART</a></li>
+  <li><a class="" href="#home">POST</a></li>
+  <li><a href="confluenceapp.html">NEWS</a></li>
+  <li><a href="#contact">MUSIC</a></li>
+  <li><a href="#about">ART</a></li>
   <li><a href=""> FASHION </a></li>
+  
 </ul>
 
-<div id="feedStyle" style="padding:20px;background-color:lightgray;height:350vh; top:0vh;">
+<div id="feedStyle" style="padding:20px;background-color:lightgray;height:570vh; top:0vh;">
     <h1 style="text-align: center;"> NEWS FEED </h1>
     <h2 style="font-size: 30px;"> FASHION
     <p style="font-size: 20px; font-weight: bold;"> Supreme Taps Japanese Artist Sekintani La Norihiro for Distorted Graphic Capsule</p>
@@ -146,11 +175,21 @@
 
         Release Date: May 2 <br><br>
 
-        Buy: In Supreme’s New York, Brooklyn, Los Angeles, London, and Paris stores. Available in Japan May 4.
+        Buy: In Supreme’s New York, Brooklyn, Los Angeles, London, and Paris stores. Available in Japan May 4.<br><br> </p>
+        <p style="text-indent: 2.0em; font-size: 12px;"> by Justin Fuller 30min ago</p>
         <button id="clickMore" type="submit" class="btn btn-danger btn-sm" role="button">CLICK TO READ FULL ARTICLE </button>
         
-    </p>
-        <p style="font-size: 20px; font-weight: bold;"> 
+    
+        <div class="container">
+    <form>
+        <div class="form-group">
+        <label style="font-size: 12px;"for="comment">Leave your comment:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <input class="btn btn-danger" type="submit" value="Submit">
+  </form>
+</div>
+        <p style="font-size: 20px; font-weight: bold;"> <br>
         Nike’s “City Pride” Pack Celebrates Old-School Baseball Uniforms
         </p>
         <p style="font-size: 16px">
@@ -158,30 +197,73 @@
 
             Release Date: May 3<br><br>
 
-            Price: $110 for the Blazer Mid ’77, $125 for the Air Trainer Huarache, and $130 for the Air Force 1
+            Price: $110 for the Blazer Mid ’77, $125 for the Air Trainer Huarache, and $130 for the Air Force 1 <br><br> </p>
+            <p style="text-indent: 2.0em; font-size: 12px;"> by Zion Williamson 1hour ago</p>
             <button id="clickMoreOne" type="submit" class="btn btn-danger btn-sm" role="button">CLICK TO READ FULL ARTICLE </button>
-        </p>
+        
+        <div class="container">
+    <form>
+        <div class="form-group">
+        <label style="font-size: 12px;"for="comment">Leave your comment:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <input class="btn btn-danger" type="submit" value="Submit">
+  </form>
+</div>
     </h2>
-    <h3 style="font-size: 30px;"> MUSIC 
+    <h3 style="font-size: 30px;"><br> MUSIC 
         <p style="font-size: 20px; font-weight: bold;"> 21 Savage Gets Over an Ex in His “Ball W/O You” Video
          </p>
-        <p style="font-size: 16px">21 Savage just dropped the music video for his latest single, “Ball W/O You” off I Am > I Was. The Walu-directed visual kicks off at a nightclub where the rapper’s former partner is partying with friends before passing out in a bathroom stall. In contrast, the rapper appears in a meditative state, chilling in a balcony while gazing onto a city skyline as he spits bars about their past.
+        <p style="font-size: 16px">21 Savage just dropped the music video for his latest single, “Ball W/O You” off I Am > I Was. The Walu-directed visual kicks off at a nightclub where the rapper’s former partner is partying with friends before passing out in a bathroom stall. In contrast, the rapper appears in a meditative state, chilling in a balcony while gazing onto a city skyline as he spits bars about their past. <br><br> </p>
+        <p style="text-indent: 2.0em; font-size: 12px;"> by Ian Whitlow 1hour ago</p>
             <button id="clickMoreTwo" type="submit" class="btn btn-danger btn-sm" role="button">CLICK TO READ FULL ARTICLE </button>
+        
+        <div class="container">
+    <form>
+        <div class="form-group">
+        <label style="font-size: 12px;"for="comment">Leave your comment:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <input class="btn btn-danger" type="submit" value="Submit">
+  </form>
+</div>
+        <p style="font-size: 20px; font-weight: bold;"> <br> Kanye West’s Sunday Service Merch Puts Fonts on the Main Stage
         </p>
-        <p style="font-size: 20px; font-weight: bold;"> Kanye West’s Sunday Service Merch Puts Fonts on the Main Stage
-        </p>
-        <p style="font-size: 16px">Kanye West dropped new merch to coincide with his Sunday Service performance at Coachella this weekend. And while the pieces mostly caught attention for their evangelical-style slogans such as “Trust God” and “Jesus Walks,” we found ourselves focusing on two aspects in particular: the font used throughout and their not insignificant price point.
+        <p style="font-size: 16px">Kanye West dropped new merch to coincide with his Sunday Service performance at Coachella this weekend. And while the pieces mostly caught attention for their evangelical-style slogans such as “Trust God” and “Jesus Walks,” we found ourselves focusing on two aspects in particular: the font used throughout and their not insignificant price point. <br><br> </p>
+            <p style="text-indent: 2.0em; font-size: 12px;"> by Kahla Cornett 2hours ago</p>
             <button id="clickMoreThree" type="submit" class="btn btn-danger btn-sm" role="button">CLICK TO READ FULL ARTICLE </button>
-        </p>
+        
+        <div class="container">
+    <form>
+        <div class="form-group">
+        <label style="font-size: 12px;"for="comment">Leave your comment:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <input class="btn btn-danger" type="submit" value="Submit">
+  </form>
+</div>
     </h3>
-    <h4 style="font-size: 30px;"> ART
-    <p style="font-size: 20px; font-weight: bold;">How Vaughn Spann Became the Art World’s New Favorite Painter 
+    <h4 style="font-size: 30px;"><br>ART
+    <p style="font-size: 20px; font-weight: bold;"> <br> How Vaughn Spann Became the Art World’s New Favorite Painter 
     </p>
-        <p style="font-size: 16px"> If you knew Vaughn Spann nine years ago in Orange, New Jersey, you probably didn’t expect this. Then in high school, Spann was a track star, a varsity basketball player, and a science whiz on his way to Rutgers to study biology. He was always appreciative of art, but before his senior year, the only things he’d really draw were anime characters, which he’d discuss at length with his dorkier friends.
+        <p style="font-size: 16px"> If you knew Vaughn Spann nine years ago in Orange, New Jersey, you probably didn’t expect this. Then in high school, Spann was a track star, a varsity basketball player, and a science whiz on his way to Rutgers to study biology. He was always appreciative of art, but before his senior year, the only things he’d really draw were anime characters, which he’d discuss at length with his dorkier friends.<br><br> </p>
+            <p style="text-indent: 2.0em; font-size: 12px;"> by Alex Morgan 3hours ago</p>
             <button id="clickMoreFour" type="submit" class="btn btn-danger btn-sm" role="button">CLICK TO READ FULL ARTICLE </button>
-        </p>
+        
+<div class="container">
+    <form>
+        <div class="form-group">
+        <label style="font-size: 12px;"for="comment">Leave your comment:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <input class="btn btn-danger" type="submit" value="Submit">
+  </form>
+</div>
     </h4>
-    <div> </div>
+     
+    
+    
+   
 </div>
         
 </div>
