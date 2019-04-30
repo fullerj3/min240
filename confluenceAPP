@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device width, initial-scale = 1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    <title> CONFLUENCE </title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    .jumbotron{
+        background-color: red;
+        color: white;
+        padding: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-family: sans-serif;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0%;
+    }
+    .tab-content{
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+
+    }
+    body {margin:0;}
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left:0;
+}
+
+    li {
+        float: right;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: sans-serif
+}
+
+    li a:hover:not(.active) {
+        background-color: darkred;
+}
+
+    .active {
+        background-color: red;
+}
+    .filler{
+       position: absolute;
+        background-color: lightgray;
+        top:0%;
+        left:0%;
+        width:100%;
+        height:20vh;
+        
+    }
+    
+    @media screen and (max-width: 900px) {
+        ul {
+        width: 100%;
+        height: auto;
+        position: fixed;
+  } 
+    @media screen and (max-width: 400px) {
+        li  {
+    text-align: center;
+    float: none;
+    
+        }
+    @media screen and (max-width: 400px) {
+        .jumbotron{
+        background-color: red;
+        color: black;
+        padding: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-family: sans-serif;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        height: 10%;
+    }
+        #loginWIN {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            width: 50%;
+            height: 50%;
+            text-align: center;
+            color: white;
+            background-color: black;
+            display: none;
+            z-index: 999;
+        }
+    </style>
+<body>
+    <div class="container"> 
+    <h1 style="text-align: center;"> CONFLUENCE APP</h1>
+        
+    
+        
+    <div id="thisJumbo" class="jumbotron">
+        <button id="exitIcon" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+       <p> CONFLUENCE is a social hub for art, fashion, and music. Where you can get the latest news for what is going on in the world of art, fashion, and music. Soon you will be able to look at others post and comment on their work along with being able to communicate with each other via inboxing. 
+    </p> 
+        <p> 
+            <button id="loginBTN" type="submit" class="btn btn-danger btn-sm" role="button">LOG IN </button>
+            <input id="signBTN" type="button" value="SIGN UP" class="btn btn-danger btn-sm">
+            <button id="exitIconTwo"type="button" class="btn btn-danger btn-sm">CONTINUE AS GUEST</button> 
+        </p>
+      
+    </div>
+        <ul>
+  <li><a class="active" href="#home">POST</a></li>
+  <li><a href="confluenceapp.html">NEWS</a></li>
+  <li><a href="#contact">MUSIC</a></li>
+  <li><a href="#about">ART</a></li>
+  <li><a href=""> FASHION </a></li>
+  <li><a href="landingpagePART2.html"> LANDING PAGE </a></li>
+</ul>
+
+<div id="feedStyle" style="padding:20px;background-color:lightgray;height:350vh; top:0vh;">
+    <h1 style="text-align: center;"> NEWS FEED </h1>
+    <h2 style="font-size: 30px;"> FASHION
+    <p style="font-size: 20px; font-weight: bold;"> Supreme Taps Japanese Artist Sekintani La Norihiro for Distorted Graphic Capsule</p>
+        <p style="font-size: 16px ">
+        Key Pieces: The coach jacket boasting full  Sekintani La Norihiro print is the boldest item in the collection by fair, especially when paired with the matching graphic skate pants. <br><br>
+
+        Release Date: May 2 <br><br>
+
+        Buy: In Supreme’s New York, Brooklyn, Los Angeles, London, and Paris stores. Available in Japan May 4.
+        <button id="clickMore" type="submit" class="btn btn-danger btn-sm" role="button">CLICK TO READ FULL ARTICLE </button>
+        
+    </p>
+        <p style="font-size: 20px; font-weight: bold;"> 
+        Nike’s “City Pride” Pack Celebrates Old-School Baseball Uniforms
+        </p>
+        <p style="font-size: 16px">
+            Key Pieces: Each of the three styles boasts muted leather uppers with pops of color throughout. The Air Force 1 pays homage to the city of Toronto, home to the MLB’s Blue Jays, with a blue tone colorway. The Air Trainer Huarache represents the city of Houston, with a mix of grey, red, orange, and yellow. The Blazer Mid ’77 takes inspiration from Chicago, with black and orange detailing on the Swoosh. All three sneakers feature green sock liners, which are a nod to the under bill of baseball caps, and feature baseball-esque stitching on their tongues. <br><br>
+
+            Release Date: May 3<br><br>
+
+            Price: $110 for the Blazer Mid ’77, $125 for the Air Trainer Huarache, and $130 for the Air Force 1
+            <button id="clickMoreOne" type="submit" class="btn btn-danger btn-sm" role="button">CLICK TO READ FULL ARTICLE </button>
+        </p>
+    </h2>
+    <h3 style="font-size: 30px;"> MUSIC 
+        <p style="font-size: 20px; font-weight: bold;"> 21 Savage Gets Over an Ex in His “Ball W/O You” Video
+         </p>
+        <p style="font-size: 16px">21 Savage just dropped the music video for his latest single, “Ball W/O You” off I Am > I Was. The Walu-directed visual kicks off at a nightclub where the rapper’s former partner is partying with friends before passing out in a bathroom stall. In contrast, the rapper appears in a meditative state, chilling in a balcony while gazing onto a city skyline as he spits bars about their past.
+            <button id="clickMoreTwo" type="submit" class="btn btn-danger btn-sm" role="button">CLICK TO READ FULL ARTICLE </button>
+        </p>
+        <p style="font-size: 20px; font-weight: bold;"> Kanye West’s Sunday Service Merch Puts Fonts on the Main Stage
+        </p>
+        <p style="font-size: 16px">Kanye West dropped new merch to coincide with his Sunday Service performance at Coachella this weekend. And while the pieces mostly caught attention for their evangelical-style slogans such as “Trust God” and “Jesus Walks,” we found ourselves focusing on two aspects in particular: the font used throughout and their not insignificant price point.
+            <button id="clickMoreThree" type="submit" class="btn btn-danger btn-sm" role="button">CLICK TO READ FULL ARTICLE </button>
+        </p>
+    </h3>
+    <h4 style="font-size: 30px;"> ART
+    <p style="font-size: 20px; font-weight: bold;">How Vaughn Spann Became the Art World’s New Favorite Painter 
+    </p>
+        <p style="font-size: 16px"> If you knew Vaughn Spann nine years ago in Orange, New Jersey, you probably didn’t expect this. Then in high school, Spann was a track star, a varsity basketball player, and a science whiz on his way to Rutgers to study biology. He was always appreciative of art, but before his senior year, the only things he’d really draw were anime characters, which he’d discuss at length with his dorkier friends.
+            <button id="clickMoreFour" type="submit" class="btn btn-danger btn-sm" role="button">CLICK TO READ FULL ARTICLE </button>
+        </p>
+    </h4>
+    <div> </div>
+</div>
+        
+</div>
+    
+  <div id="loginWIN" class="modal" tabindex="-1" role="dialog" style="display: none;">
+      <div class="modal-dialog" role="document"> 
+      <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title"> ERROR OCCURRED </h5>
+          </div>
+        <div class="modal-body">
+            <p> SORRY WE HAVEN'T FINISHED DEVELOPMENT <br>
+            WE'RE SORRY FOR THE INCONVIENCE <br>
+            PLEASE COME BACK SOON<br> </p>
+        </div>
+          <div class="modal-footer">
+              <button id="closeBTN" type="button" class="btn btn-danger" data-dismiss="modal"> CLOSE </button>
+            </div>
+          </div>
+      </div>
+    </div>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"> 
+    </script>
+    
+    <script>
+        var myExitIcon = document.querySelector("#exitIcon");
+        var myThisJumbo = document.querySelector("#thisJumbo");
+        var GuestExit = document.querySelector("#exitIconTwo");
+        
+        myExitIcon.addEventListener("click", hideJumbo, false);
+        GuestExit.addEventListener("click", hideJumbo, false);
+        
+        function hideJumbo() {
+            console.log("there!");
+            myThisJumbo.style.display = "none";
+        }
+    
+        var myLoginBTN = document.querySelector("#loginBTN");
+        myLoginBTN.addEventListener("click", showLogin, false);
+        
+        var showLoginBox = document.querySelector("#loginWIN");
+        showLoginBox.style.display = "none";
+        
+        var mySignUP = document.querySelector("#signBTN");
+        mySignUP.addEventListener("click", showLogin, false);
+        
+        var clickART = document.querySelector("#clickMore");
+        clickART.addEventListener("click", showLogin, false);
+        
+        var clickARTone = document.querySelector("#clickMoreOne");
+        clickARTone.addEventListener("click", showLogin, false);
+        
+        var clickARTTwo = document.querySelector("#clickMoreTwo");
+        clickARTTwo.addEventListener("click", showLogin, false);
+        
+        var clickARTThree = document.querySelector("#clickMoreThree");
+        clickARTThree.addEventListener("click", showLogin, false);
+        
+        var clickARTFour = document.querySelector("#clickMoreFour");
+        clickARTFour.addEventListener("click", showLogin, false);
+        
+        function showLogin() {
+            console.log("here!");
+            showLoginBox.style.display = "block";
+        }
+        
+        var exitPOPup = document.querySelector("#closeBTN");
+        
+        exitPOPup.addEventListener("click", hideBox, false); 
+        
+        function hideBox(){
+            console.log("there!");
+            showLoginBox.style.display = "none";
+        }
+        
+    </script>
+ 
+    </body>
+
+
+
+</html>
