@@ -57,6 +57,7 @@
         bottom: 0;
         width: 100%;
         left:0;
+        z-index: 2;
 }
 
     li {
@@ -166,7 +167,7 @@
   
 </ul>
 
-<div id="feedStyle" style="padding:20px;background-color:lightgray;height:570vh; top:0vh;">
+<div id="feedStyle" style="padding:20px;background-color:lightgray;height:750vh; top:0vh;">
     <h1 style="text-align: center;"> NEWS FEED </h1>
     <h2 style="font-size: 30px;"> FASHION
     <p style="font-size: 20px; font-weight: bold;"> Supreme Taps Japanese Artist Sekintani La Norihiro for Distorted Graphic Capsule</p>
@@ -263,9 +264,28 @@
      
     
     
-   
+
+<div class="card" style="transform: scale(.75); z-index: 0;">
+  <div class="view overlay">
+    <img class="card-img-top" style="padding:5px;" src="https://images.unsplash.com/photo-1515986627277-c1684e973dea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80" alt="Card image cap">
+    <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+  <div class="card-share">
+    <a class="btn-floating btn-danger  ml-auto mr-4 float-right"> share <i class="fas fa-share-alt"></i></a>
+
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">@jfull</h4>
+    <hr>
+    <p class="card-text">Looking for designers and artist to help me create a new clothing brand, if you're interested please DM me.</p>
+    <button class="btn btn-danger btn-rounded btn-md">Comment</button>
+      <button class="btn btn-danger btn-rounded btn-md">Direct Message</button>
+
+  </div>
 </div>
-        
+</div>     
 </div>
     
   <div id="loginWIN" class="modal" tabindex="-1" role="dialog" style="display: none;">
